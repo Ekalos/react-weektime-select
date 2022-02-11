@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+/*
+ * @Autor: Ekalos
+ * @Date: 2022-01-26 16:15:55
+ * @LastEditors: Ekalos
+ * @LastEditTime: 2022-02-11 17:58:20
+ */
+import MultiTimeSelect from "./component/multiTimeSelect";
+// import "./App.css";
+window.ref = null;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <MultiTimeSelect timeSlice={[]} ref={(el) => (window.ref = el)} />
     </div>
   );
 }
