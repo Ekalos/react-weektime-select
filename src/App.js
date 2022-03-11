@@ -18,7 +18,11 @@ function App() {
         justifyContent: "center",
       }}
     >
-      <MultiTimeSelect timeSlice={[]} ref={(el) => (window.ref = el)} />
+      <MultiTimeSelect
+        timeSlice={[]}
+        ref={(el) => (window.ref = el)}
+        style={{ width: "50vw" }}
+      />
     </div>
   );
 }
