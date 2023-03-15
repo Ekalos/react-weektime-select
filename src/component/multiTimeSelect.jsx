@@ -286,6 +286,7 @@ const MultiTimeSelect = (
       return selectedSlice;
     },
     clearSelected() {
+      pushOrPull.current = true;
       setSelected(null);
     },
   }));
@@ -293,7 +294,13 @@ const MultiTimeSelect = (
   return (
     <SelectTable {...props}>
       <div ref={maskRef} className="select-mask"></div>
-      <div className="close" onClick={() => setSelected(null)}>
+      <div
+        className="close"
+        onClick={() => {
+          pushOrPull.current = true;
+          setSelected(null);
+        }}
+      >
         <svg
           t="1646291416176"
           className="icon"
